@@ -1,9 +1,11 @@
 {block content}
-<div id="banner">
-	<h1 n:block=title>Article system</h1>
-</div>
 
-<div id="content">
+
+<div class="container">
+
+	<div id="banner" class="mb-3"  >
+		<h2 n:block=title>List of articles...</h2>
+	</div>
 
 	{foreach $posts as $post}
 	<div class="post">
