@@ -5,5 +5,15 @@
 
 <div id="content">
 
+	{foreach $posts as $post}
+	<div class="post">
+		<h2>{$post->TITLE}</h2>
+
+		<div>{$post->PEREX}</div>
+	</div>
+	{/foreach}
+
+
+
 </div>
 
