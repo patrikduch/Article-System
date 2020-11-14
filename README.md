@@ -18,6 +18,9 @@ docker-compose dowm
 
 XDebug
 
+
+### VSCode plugins
+
 Name: PHP Debug
 Id: felixfbecker.php-debug
 Description: Debug support for PHP with XDebug
