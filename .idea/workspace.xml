@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7bcaab3-54be-411b-97ec-7386756697b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/IdeaPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Idea/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site.conf" beforeDir="false" afterPath="$PROJECT_DIR$/site.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/webapp/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/forms" />
+      <path value="$PROJECT_DIR$/webapp/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/database" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/webapp/vendor/composer" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/webapp/vendor/symfony/thanks" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/mail" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/webapp/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/webapp/vendor/nette/component-model" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1kGxbiEsPy88NVkR1ufGzhV42lm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker-compose.yml" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="removeVolumesOnComposeDown" value="true" />
+          <option name="commandLineOptions" value="--build" />
+          <option name="services">
+            <list>
+              <option value="db" />
+              <option value="php" />
+              <option value="phpmyadmin" />
+              <option value="web" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7bcaab3-54be-411b-97ec-7386756697b9" name="Default Changelist" comment="" />
+      <created>1605340802425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605340802425</updated>
+      <workItem from="1605340803783" duration="565000" />
+      <workItem from="1605341395063" duration="1839000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="116" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605343167365">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="309" y="116" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605343167365" />
+    <state x="693" y="341" key="DockerComposeFileDialog" timestamp="1605340842121">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="693" y="341" key="DockerComposeFileDialog/0.0.1707.920@0.0.1707.920" timestamp="1605340842121" />
+    <state x="635" y="228" key="FileChooserDialogImpl" timestamp="1605340840728">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="635" y="228" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1605340840728" />
+  </component>
+</project>

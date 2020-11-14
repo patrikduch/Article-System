@@ -7,7 +7,7 @@ namespace App\Presenters;
 use Nette;
 
 
-final class HomepagePresenter extends Nette\Application\UI\Presenter
+final class UserpagePresenter extends Nette\Application\UI\Presenter
 {
 
     private $database;
@@ -18,6 +18,6 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     }
 
     public function renderDefault() {
-        $this->template->projectDetail = $this->database->table('ProjectDetail')->limit(1);
+        
     }
 }
