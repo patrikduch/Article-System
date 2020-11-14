@@ -1,4 +1,13 @@
 {block content}
-<div>
-	<p>Homepage</p>
+<div class="container">
+	
+	<h2 class="text-center">Seznam článků</h2>
+
+	{foreach $posts as $post}
+		<div class="mb-4">
+			<h2>{$post->TITLE}</h2>
+
+			<div>{$post->PEREX}</div>
+		</div>
+	{/foreach}
 </div>
