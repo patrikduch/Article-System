@@ -2,7 +2,7 @@
 
 namespace App\Presenters;
 
-use App\Repositories\ProjectDetailRepository;
+use App\Infrastructure\Repositories\ArticleRepository;
 use App\Services\Authenticator;
 use Nette;
 use App\Presenters\BasePresenter;
@@ -13,6 +13,10 @@ use App\Presenters\BasePresenter;
  */
 final class HomepagePresenter extends BasePresenter
 {
+
+    /** @var ArticleRepository @inject */
+    public $articleRepository;
+
     private $clicked = false;
     /**
      * Handler of async signal event.
@@ -31,6 +35,16 @@ final class HomepagePresenter extends BasePresenter
      */
     public function renderDefault()
     {
-        $this->template->clicked = $this->clicked;
+        $articlePageId = $this->getParameter('pageId');
+
+        if (is_null($articlePageId)) {
+            $articlePageId = 1;
+        }
+
+        $result = $this->articleRepository->getPagedArticles($articlePageId, 4);
+
+        $this->template->articles = $result['items'];
+        $this->template->articlesLastPage = $result['lastPage'];
     }
+
 }

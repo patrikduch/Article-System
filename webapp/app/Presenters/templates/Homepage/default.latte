@@ -1,11 +1,25 @@
 {block content}
 
-<a class="ajax" n:href="changeClickState!">Change</a>
+<div n:if="$user->isLoggedIn()">
 
-{snippet clicked_area}
-	{$clicked ? "Clicked": "Not clicked"}
-{/snippet}
+	<h2 class="text-center">Seznam článků</h2>
 
+	{foreach $articles as $article}
+		<div class="mt-3">
+			<span><h3>{$article->title}</h3><button>+</button></span>
+			<div class="mt-1">{$article->perex}</div>
+			<div class="mt-1">{$article->published_date}</div>
+		</div>
+	{/foreach}
+
+	<div class="mt-4">
+		{for $i = 1; $i <= $articlesLastPage; $i++}
+			<a class="btn btn-primary" n:href=":default pageId => $i" role="button">{$i}</a>
+		{/for}
+	</div>
+
+
+</div>
 
 <script>
 	$(function() {

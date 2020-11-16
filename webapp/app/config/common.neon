@@ -19,15 +19,14 @@ di:
 
 services:
 	router: App\Router\RouterFactory::createRouter
-
 	security.passwords: Nette\Security\Passwords(::PASSWORD_BCRYPT, [cost: 12])
-
 	projectDetailRepository:
 		class: App\Repositories\ProjectDetailRepository
 	userRepository:
 	    class: App\Infrastructure\Repositories\UserRepository
+	articleRepository:
+	    class: App\Infrastructure\Repositories\ArticleRepository
 	passwordEncrypterService:
 	    class: App\Services\PasswordEncrypter
-
 	authenticator:
 	    class: App\Services\Authenticator
