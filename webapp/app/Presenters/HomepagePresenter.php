@@ -17,13 +17,12 @@ final class HomepagePresenter extends BasePresenter
     /** @var ArticleRepository @inject */
     public $articleRepository;
 
-    private $clicked = false;
     /**
      * Handler of async signal event.
      */
-    public function handleChangeClickState()
+    public function handleChangeClickState($articleId)
     {
-        $this->clicked = !($this->clicked);
+        $this->articleRepository->incrementRatingCount($articleId);
 
         if ($this->isAjax()) {
             $this->redrawControl('clicked_area'); // invalid snippet 'clicked_area'

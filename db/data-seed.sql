@@ -1,4 +1,4 @@
-INSERT INTO ProjectDetail VALUES (1, 'Projekt name');
+INSERT INTO ProjectDetail VALUES (1, 'Blog');
 
 INSERT INTO Article (title, perex, published_date, isvisible) VALUES ('Článek č.1', 'Toto je Perex prvního článku...',  '2015-11-05 14:29:36', TRUE);
 INSERT INTO Article (title, perex, published_date, isvisible) VALUES ('Článek č.2', 'Toto je Perex druhého článku...',  '2017-11-05 14:29:36', TRUE);

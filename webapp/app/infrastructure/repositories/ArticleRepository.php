@@ -53,4 +53,16 @@ final class ArticleRepository implements \IArticleRepository
 
         ];
     }
+
+    /**
+     * Increment rating for specific article.
+     * @param $articleId
+     */
+    public function incrementRatingCount($articleId)
+    {
+        $ratingCount = $this->database->fetchField('SELECT rating FROM Article WHERE id = ?', $articleId);
+        $ratingCount++;
+
+        $this->database->query("UPDATE Article SET rating = $ratingCount where id = $articleId;");
+    }
 }

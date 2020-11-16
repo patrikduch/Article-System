@@ -16,6 +16,6 @@ CREATE TABLE Article (
 	title VARCHAR(45) NOT NULL,
 	perex VARCHAR(80) NOT NULL,
 	published_date DATETIME NOT NULL,
-	isvisible BOOLEAN
+	isvisible BOOLEAN,
+	rating INT DEFAULT '0'
 );
-
