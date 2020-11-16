@@ -1,13 +1,19 @@
 {block content}
-<div class="container">
-	
-	<h2 class="text-center">Seznam článků</h2>
 
-	{foreach $posts as $post}
-		<div class="mb-4">
-			<h2>{$post->TITLE}</h2>
+<a class="ajax" n:href="changeClickState!">Change</a>
 
-			<div>{$post->PEREX}</div>
-		</div>
-	{/foreach}
-</div>
+{snippet clicked_area}
+	{$clicked ? "Clicked": "Not clicked"}
+{/snippet}
+
+
+<script>
+	$(function() {
+
+		$('a ajax').on('click', function() {
+			$.get(this.href);
+			return false;
+		});
+
+	});
+</script>

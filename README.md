@@ -12,32 +12,14 @@ docker-compose up
 
 docker-compose dowm
 
-# Development
+<hr>
 
-## Debugging
+# Nette
 
-XDebug
+### Third-party libraries
+Contributte bootstrap 4 forms
 
+<ul>
+    https://github.com/contributte/forms-bootstrap
+</ul>
 
-### VSCode plugins
-
-Name: PHP Debug
-Id: felixfbecker.php-debug
-Description: Debug support for PHP with XDebug
-Version: 1.13.0
-Publisher: Felix Becker
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug
-
-Name: PHP IntelliSense
-Id: felixfbecker.php-intellisense
-Description: Advanced Autocompletion and Refactoring support for PHP
-Version: 2.3.14
-Publisher: Felix Becker
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense
-
-Name: PHP Intelephense
-Id: bmewburn.vscode-intelephense-client
-Description: PHP code intelligence for Visual Studio Code
-Version: 1.5.4
-Publisher: Ben Mewburn
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client

@@ -1,55 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Nette dockerization by Patrik Duch</title>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-1.7.0.min.js"  integrity="sha256-/05Jde9AMAT4/o5ZAI23rUf1SxDYTHLrkOco0eyRV84="crossorigin="anonymous"></script>
+
+ 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    	<title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
-  </head>
-  <body>
+	<link rel="stylesheet" href="{$basePath}/static/css/App.css">
 
-    <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+</head>
 
-	<header>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" n:href="Homepage:default">
+			<h1 class="display-4" n:foreach="$projectDetail as $item">
+				{$item->name}
+			</h1>
+		</a>
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" n:href="Homepage:default"><h1>Article system</h1></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto"></ul>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" n:href="Homepage:default">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" n:href="Userpage:default">Users</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+			<ul class="navbar-nav"  n:if="(!($user->isLoggedIn()))">
+				<li class="nav-item">
+					<a class="nav-link" n:href="UserAuth:default">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" n:href="Signup:default">Register</a>
+				</li>
+        	</ul>
 
+			<ul class="navbar-nav"  n:if="$user->isLoggedIn()">
 
-	{include content}
+				<li class="nav-item">
+					<a class="nav-link" n:href="ProfileEdit:default">Profile</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" n:href=":UserLogout!">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+		{include content}
+	</div>
+
 
 	{block scripts}
-	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
-	 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-	{/block}
 
+	<!-- jQuery Nette -->
+	<script src="{$basePath}/static/js/jquery.nette.js"></script>
+
+	<!-- Nette forms -->
+	<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+
+
+	 <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    -->
-  </body>
+
+	!-->
+	
+	{/block}
+</body>
 </html>
+

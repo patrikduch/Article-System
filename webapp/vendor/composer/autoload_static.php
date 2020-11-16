@@ -15,6 +15,10 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         array (
             'Symfony\\Thanks\\' => 15,
         ),
+        'C' => 
+        array (
+            'Contributte\\FormsBootstrap\\' => 27,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -25,6 +29,10 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Symfony\\Thanks\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/thanks/src',
+        ),
+        'Contributte\\FormsBootstrap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/contributte/forms-bootstrap/src',
         ),
         'App\\' => 
         array (

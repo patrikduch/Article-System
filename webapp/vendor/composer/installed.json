@@ -1,6 +1,71 @@
 {
     "packages": [
         {
+            "name": "contributte/forms-bootstrap",
+            "version": "v0.3.1",
+            "version_normalized": "0.3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contributte/forms-bootstrap.git",
+                "reference": "439d33aade5720b70f271646bed535baaea93907"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contributte/forms-bootstrap/zipball/439d33aade5720b70f271646bed535baaea93907",
+                "reference": "439d33aade5720b70f271646bed535baaea93907",
+                "shasum": ""
+            },
+            "require": {
+                "nette/application": "^3.0",
+                "nette/forms": "^3.0.4",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "ninjify/qa": "^v0.10",
+                "phpstan/phpstan": "^0.12.6",
+                "phpstan/phpstan-deprecation-rules": "^0.12",
+                "phpstan/phpstan-nette": "^0.12",
+                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpunit/phpunit": "^8.5"
+            },
+            "time": "2020-10-30T11:38:27+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Contributte\\FormsBootstrap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dalibor Korpar",
+                    "email": "dalibor.korpar@gmail.com"
+                }
+            ],
+            "description": "Nette extension for Bootstrap forms",
+            "homepage": "https://github.com/contributte/forms-bootstrap",
+            "keywords": [
+                "Forms",
+                "bootstrap",
+                "library",
+                "nette"
+            ],
+            "support": {
+                "issues": "https://github.com/contributte/forms-bootstrap/issues",
+                "source": "https://github.com/contributte/forms-bootstrap/tree/v0.3.1"
+            },
+            "install-path": "../contributte/forms-bootstrap"
+        },
+        {
             "name": "latte/latte",
             "version": "v2.8.2",
             "version_normalized": "2.8.2.0",

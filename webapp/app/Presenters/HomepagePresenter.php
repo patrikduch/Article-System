@@ -1,27 +1,36 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Presenters;
 
+use App\Repositories\ProjectDetailRepository;
+use App\Services\Authenticator;
 use Nette;
+use App\Presenters\BasePresenter;
 
-
-final class HomepagePresenter extends Nette\Application\UI\Presenter
+/**
+ * Class HomepagePresenter
+ * @package App\Presenters
+ */
+final class HomepagePresenter extends BasePresenter
 {
-
-    private $database;
-
-
-    public function __construct(Nette\Database\Context $database)
+    private $clicked = false;
+    /**
+     * Handler of async signal event.
+     */
+    public function handleChangeClickState()
     {
-        $this->database = $database;
+        $this->clicked = !($this->clicked);
+
+        if ($this->isAjax()) {
+            $this->redrawControl('clicked_area'); // invalid snippet 'clicked_area'
+        }
     }
 
+    /**
+     * Renders default view (default.latte).
+     */
     public function renderDefault()
     {
-        $this->template->posts = $this->database->table('ARTICLE')
-            ->order('PUBLISHED_DATE ASC')
-            ->limit(5);
+        $this->template->clicked = $this->clicked;
     }
 }

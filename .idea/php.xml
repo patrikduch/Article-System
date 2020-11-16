@@ -24,6 +24,7 @@
       <path value="$PROJECT_DIR$/webapp/vendor/nette/http" />
       <path value="$PROJECT_DIR$/webapp/vendor/nette/finder" />
       <path value="$PROJECT_DIR$/webapp/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/webapp/vendor/contributte/forms-bootstrap" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/webapp/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/webapp/vendor/contributte/forms-bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/webapp/vendor/latte/latte" />
       <excludeFolder url="file://$MODULE_DIR$/webapp/vendor/nette/application" />
       <excludeFolder url="file://$MODULE_DIR$/webapp/vendor/nette/bootstrap" />
