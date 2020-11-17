@@ -33,21 +33,21 @@
 
 			<ul class="navbar-nav"  n:if="(!($user->isLoggedIn()))">
 				<li class="nav-item">
-					<a class="nav-link" n:href="UserAuth:default">Login</a>
+					<a class="nav-link" n:href="UserAuth:default">Přihlášení</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" n:href="Signup:default">Register</a>
+					<a class="nav-link" n:href="Signup:default">Registrace</a>
 				</li>
         	</ul>
 
 			<ul class="navbar-nav"  n:if="$user->isLoggedIn()">
 
 				<li class="nav-item">
-					<a class="nav-link" n:href="ProfileEdit:default">Profile</a>
+					<a class="nav-link" n:href="ProfileEdit:default">Profil</a>
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" n:href=":UserLogout!">Logout</a>
+					<a class="nav-link" n:href=":UserLogout!">Odhlásit se</a>
 				</li>
 			</ul>
 		</div>

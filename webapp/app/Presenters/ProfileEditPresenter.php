@@ -5,6 +5,7 @@ namespace App\Presenters;
 use App\Infrastructure\Repositories\UserRepository;
 use App\Presenters\BasePresenter;
 use App\Repositories\ProjectDetailRepository;
+use App\Services\Authenticator;
 use App\Services\PasswordEncrypter;
 use Contributte\FormsBootstrap\BootstrapForm;
 use Contributte\FormsBootstrap\Enums\RenderMode;
@@ -17,6 +18,10 @@ final class ProfileEditPresenter extends BasePresenter {
 
     private $passwordEncrypter;
     private $userRepository;
+
+    /** @var Authenticator @inject */
+    public $authentificatorService;
+
     public function __construct(UserRepository $userRepository, PasswordEncrypter $passwordEncrypter)
     {
         $this->userRepository = $userRepository;
@@ -27,7 +32,9 @@ final class ProfileEditPresenter extends BasePresenter {
      * Renders default view (default.latte).
      */
     public function renderDefault() {
-
+        if(!($this->user->isLoggedIn())) {
+            $this->redirect('Homepage:default');
+        }
     }
 
 
