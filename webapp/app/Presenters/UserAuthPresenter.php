@@ -44,17 +44,17 @@ final class UserAuthPresenter extends BasePresenter {
         $form->renderMode = RenderMode::VERTICAL_MODE;
         $row = $form->addRow();
         $row->addCell(6)
-            ->addText('username', 'Enter username...')
-            ->setRequired('Please enter your username');
+            ->addText('username', 'Uživatelské jméno')
+            ->setRequired('Prosím zadejte vaše uživatelské jméno');
 
 
         $secondRow= $form->addRow();
         $secondRow->addCell(6)
-            ->addPassword('password', 'Enter password...')
-            ->setRequired('Please enter your password');
+            ->addPassword('password', 'Heslo')
+            ->setRequired('Prosím zadejte vaše heslo');
 
 
-        $form->addSubmit('send', 'Login in');
+        $form->addSubmit('send', 'Přihlásit se');
         $form->onSuccess[] = [$this, 'formSucceeded'];
         return $form;
     }
