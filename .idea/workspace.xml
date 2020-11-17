@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7bcaab3-54be-411b-97ec-7386756697b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/articledetail.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/data-seed.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/data-seed.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/core/interfaces/repositories/IArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/infrastructure/repositories/ArticleRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +116,7 @@
       <workItem from="1605532146597" duration="1085000" />
       <workItem from="1605534922350" duration="8811000" />
       <workItem from="1605558427209" duration="7605000" />
+      <workItem from="1605609388207" duration="6204000" />
     </task>
     <servers />
   </component>
@@ -134,10 +140,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="309" y="116" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1605343167365" />
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1605563374851">
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser" timestamp="1605614732236">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1605563374851" />
+    <state x="659" y="143" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1605614732236" />
     <state x="693" y="341" key="DockerComposeFileDialog" timestamp="1605340842121">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

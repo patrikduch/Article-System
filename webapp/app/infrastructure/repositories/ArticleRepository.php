@@ -56,7 +56,7 @@ final class ArticleRepository implements \IArticleRepository
 
     /**
      * Increment rating for specific article.
-     * @param $articleId
+     * @param $articleId $articleId identifier of target article.
      */
     public function incrementRatingCount($articleId)
     {
@@ -64,5 +64,15 @@ final class ArticleRepository implements \IArticleRepository
         $ratingCount++;
 
         $this->database->query("UPDATE Article SET rating = $ratingCount where id = $articleId;");
+    }
+
+    /**
+     * Get article by its identifier (Primary key from DBMS).
+     * @param $articleId $articleId identifier of target article.
+     */
+    public function getArticle($articleId)
+    {
+        return $this->database
+            ->fetch('SELECT * FROM Article WHERE id = ?', $articleId);
     }
 }

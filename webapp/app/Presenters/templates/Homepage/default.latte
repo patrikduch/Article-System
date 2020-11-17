@@ -14,11 +14,12 @@
 				</span>
 				<div class="mt-1">{$article->perex}</div>
 				<div class="mt-1">{$article->published_date}</div>
+				<a n:href="Homepage:ArticleDetail $article->id">Vice...</a>
 			</div>
 		{/foreach}
 	{/snippet}
 
-	
+
 	<div class="mt-4">
 		{for $i = 1; $i <= $articlesLastPage; $i++}
 			<a class="btn btn-outline-dark" n:href=":default pageId => $i" role="button">{$i}</a>

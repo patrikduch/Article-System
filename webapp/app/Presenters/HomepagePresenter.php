@@ -46,4 +46,12 @@ final class HomepagePresenter extends BasePresenter
         $this->template->articlesLastPage = $result['lastPage'];
     }
 
+    /**
+     * Renders detail of chosen article.
+     * @param $articleId $articleId identifier of target article.
+     */
+    public function renderArticleDetail($articleId) {
+        $this->template->articleContent = $this->articleRepository->getArticle($articleId);
+    }
+
 }
