@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bcaab3-54be-411b-97ec-7386756697b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/articledetail.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/templates/Homepage/articledetail.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Services/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Services/Authenticator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +112,7 @@
       <workItem from="1605532146597" duration="1085000" />
       <workItem from="1605534922350" duration="8811000" />
       <workItem from="1605558427209" duration="7605000" />
-      <workItem from="1605609388207" duration="8563000" />
+      <workItem from="1605609388207" duration="9548000" />
     </task>
     <servers />
   </component>

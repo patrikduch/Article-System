@@ -1,12 +1,16 @@
 {block content}
 
 <div n:if="$user->isLoggedIn()">
-    <a n:href=":default">Zpět na seznam článků</a>
+
+    <span class="mt-4">
+         <a n:href=":default">Zpět na seznam článků</a>
+    </span>
+
     <hr/>
     <h2 class="mt-2">Detail článku</h2>
 
     <p>Název článku: {$articleContent->title}</p>
-    <p>Datum publikace: {$articleContent->published_date}</p>
+    <p>Datum publikace: {$articleContent->published_date |date:'F j, Y'}</p>
 
     <p>Obsah:</p>
     {$articleContent->content}
