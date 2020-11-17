@@ -18,12 +18,10 @@
 		{/foreach}
 	{/snippet}
 
-
-
-
+	
 	<div class="mt-4">
 		{for $i = 1; $i <= $articlesLastPage; $i++}
-			<a class="btn btn-primary" n:href=":default pageId => $i" role="button">{$i}</a>
+			<a class="btn btn-outline-dark" n:href=":default pageId => $i" role="button">{$i}</a>
 		{/for}
 	</div>
 
