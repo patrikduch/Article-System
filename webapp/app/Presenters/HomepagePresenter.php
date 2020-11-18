@@ -2,6 +2,8 @@
 
 namespace App\Presenters;
 
+use App\Components\ArticleListControl;
+use App\Components\ArticleListControlFactory;
 use App\Infrastructure\Repositories\ArticleRepository;
 use App\Services\Authenticator;
 use Nette;
@@ -13,37 +15,22 @@ use App\Presenters\BasePresenter;
  */
 final class HomepagePresenter extends BasePresenter
 {
-
     /** @var ArticleRepository @inject */
     public $articleRepository;
 
-    /**
-     * Handler of async signal event.
-     */
-    public function handleChangeClickState($articleId)
-    {
-        $this->articleRepository->incrementRatingCount($articleId);
+    /** @var ArticleListControlFactory */
+    private $articleListFactoryControl;
 
-        if ($this->isAjax()) {
-            $this->redrawControl('clicked_area'); // invalid snippet 'clicked_area'
-        }
+    public function __construct(ArticleListControlFactory $articleListFactoryControl)
+    {
+        $this->articleListFactoryControl = $articleListFactoryControl;
     }
 
     /**
      * Renders default view (default.latte).
      */
-    public function renderDefault()
+    public function renderDefault($pageId)
     {
-        $articlePageId = $this->getParameter('pageId');
-
-        if (is_null($articlePageId)) {
-            $articlePageId = 1;
-        }
-
-        $result = $this->articleRepository->getPagedArticles($articlePageId, 4);
-
-        $this->template->articles = $result['items'];
-        $this->template->articlesLastPage = $result['lastPage'];
     }
 
     /**
@@ -52,6 +39,19 @@ final class HomepagePresenter extends BasePresenter
      */
     public function renderArticleDetail($articleId) {
         $this->template->articleContent = $this->articleRepository->getArticle($articleId);
+    }
+
+    // ---------- Components ---------
+
+    /**
+     * Create Article list component that encapuslated all needed functionality for article listing.
+     * @return ArticleListControl Component with article listing functionality.
+     */
+    protected function createComponentArticleList(): ArticleListControl
+    {
+        $articlePageId = $this->getParameter('pageId');
+
+        return $this->articleListFactoryControl->create($articlePageId);
     }
 
 }

@@ -30,3 +30,6 @@ services:
 	    class: App\Services\PasswordEncrypter
 	authenticator:
 	    class: App\Services\Authenticator
+
+	ArticleListControlFactory:
+	    class: App\Components\ArticleListControlFactory

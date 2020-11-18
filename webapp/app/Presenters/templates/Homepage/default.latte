@@ -1,34 +1,6 @@
 {block content}
 
-<div n:if="$user->isLoggedIn()">
-
-	<h2 class="text-center">Seznam článků</h2>
-
-	{snippet clicked_area}
-		{foreach $articles as $article}
-
-			<div class="mt-3">
-				<span><h3>{$article->title}</h3>
-					<a class="ajax" n:href="changeClickState! $article->id">+</a>
-					<span>Hodnoceni: {$article->rating}</span>
-				</span>
-				<div class="mt-1">{$article->perex}</div>
-				<div class="mt-1">{$article->published_date}</div>
-				<a n:href="Homepage:ArticleDetail $article->id">Vice...</a>
-			</div>
-		{/foreach}
-	{/snippet}
-
-
-	<div class="mt-4">
-		{for $i = 1; $i <= $articlesLastPage; $i++}
-			<a class="btn btn-outline-dark" n:href=":default pageId => $i" role="button">{$i}</a>
-		{/for}
-	</div>
-
-
-</div>
-
+{control articleList}
 
 <div n:if="!($user->isLoggedIn())" class="jumbotron mt-4">
 	<h2 class="display-4">Vítejte!</h2>
@@ -41,13 +13,3 @@
 	</p>
 </div>
 
-<script>
-	$(function() {
-
-		$('a ajax').on('click', function() {
-			$.get(this.href);
-			return false;
-		});
-
-	});
-</script>
