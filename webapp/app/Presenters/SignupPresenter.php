@@ -27,7 +27,8 @@ final class SignupPresenter extends BasePresenter {
     }
 
     /**
-     * @return BootstrapForm
+     * Creation of registration form.
+     * @return BootstrapForm Bootstrap form instance.
      */
     protected function createComponentRegistrationForm(): BootstrapForm
     {
@@ -51,6 +52,7 @@ final class SignupPresenter extends BasePresenter {
     }
 
     /**
+     * Signup form success event handler.
      * @param BootstrapForm $form
      * @param $data
      * @throws Nette\Application\AbortException

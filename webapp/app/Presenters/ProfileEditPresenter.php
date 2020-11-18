@@ -22,6 +22,11 @@ final class ProfileEditPresenter extends BasePresenter {
     /** @var Authenticator @inject */
     public $authentificatorService;
 
+    /**
+     * ProfileEditPresenter constructor.
+     * @param UserRepository $userRepository
+     * @param PasswordEncrypter $passwordEncrypter
+     */
     public function __construct(UserRepository $userRepository, PasswordEncrypter $passwordEncrypter)
     {
         $this->userRepository = $userRepository;
@@ -39,7 +44,8 @@ final class ProfileEditPresenter extends BasePresenter {
 
 
     /**
-     * @return BootstrapForm
+     * Creation of profile edit form.
+     * @return BootstrapForm Instance of Boostrap form.
      */
     protected function createComponentProfileEditForm(): BootstrapForm
     {
@@ -64,6 +70,7 @@ final class ProfileEditPresenter extends BasePresenter {
     }
 
     /**
+     * Profile form success event handler.
      * @param BootstrapForm $form
      * @param $data
      * @throws \Nette\Application\AbortException

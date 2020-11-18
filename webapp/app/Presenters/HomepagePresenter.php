@@ -18,9 +18,15 @@ final class HomepagePresenter extends BasePresenter
     /** @var ArticleRepository @inject */
     public $articleRepository;
 
-    /** @var ArticleListControlFactory */
+    /** @var ArticleListControlFactory $articleListFactoryControl
+     * factory for creating new instances of ArticleListControl.
+     */
     private $articleListFactoryControl;
 
+    /**
+     * HomepagePresenter constructor.
+     * @param ArticleListControlFactory $articleListFactoryControl
+     */
     public function __construct(ArticleListControlFactory $articleListFactoryControl)
     {
         $this->articleListFactoryControl = $articleListFactoryControl;
@@ -28,6 +34,8 @@ final class HomepagePresenter extends BasePresenter
 
     /**
      * Renders default view (default.latte).
+     * @param $pageId $pageId Needed page identifier argument that is being passed into sub component
+     * "ArticleListControl".
      */
     public function renderDefault($pageId)
     {
@@ -44,7 +52,7 @@ final class HomepagePresenter extends BasePresenter
     // ---------- Components ---------
 
     /**
-     * Create Article list component that encapuslated all needed functionality for article listing.
+     * Create Article list component that encapsulated all needed functionality for article listing.
      * @return ArticleListControl Component with article listing functionality.
      */
     protected function createComponentArticleList(): ArticleListControl
