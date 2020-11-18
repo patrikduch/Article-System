@@ -21,8 +21,9 @@ final class ArticleListControlFactory
     }
 
     /**
-     * @param $articlePageId
-     * @return ArticleListControl
+     * Creation new article list components.
+     * @param $articlePageId $articlePageId  Page identifier of article listing.
+     * @return ArticleListControl Component
      */
     public function create($articlePageId): ArticleListControl
     {

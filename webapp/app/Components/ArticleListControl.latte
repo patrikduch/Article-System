@@ -2,12 +2,12 @@
 
     <h2 class="text-center">Seznam článků</h2>
 
-    {snippet clicked_area}
+    {snippet articlesListContainer}
         {foreach $articles as $article}
 
             <div class="mt-3">
 				<span><h3>{$article->title}</h3>
-					<a class="ajax" n:href="changeClickState! $article->id">+</a>
+					<a class="ajax" n:href="incrementRating! $article->id">+</a>
 					<span>Hodnoceni: {$article->rating}</span>
 				</span>
                 <div class="mt-1">{$article->perex}</div>
@@ -20,7 +20,6 @@
     <div class="mt-4">
         {for $i = 1; $i <= $articlesLastPage; $i++}
             <a class="btn btn-outline-dark" href="{plink Homepage:default $i}" role="button">{$i}</a>
-
         {/for}
     </div>
 

@@ -11,11 +11,21 @@ use Nette\Application\UI\Control;
  */
 final class ArticleListControl extends Control {
 
-    /** @var ArticleRepository */
+    /** @var ArticleRepository $articleRepository  Data repository that enables article management, */
     private $articleRepository;
 
+    /**
+     * @var $articlePageId $articlePageId Article page identifier that is used for rendering inside each
+     * Article list instance.
+     */
     private $articlePageId;
 
+    /**
+     * ArticleListControl constructor.
+     * @param $articlePageId $articlePageId Article page identifier.
+     * @param ArticleRepository $articleRepository
+     * methods for Article entity.
+     */
     public function __construct($articlePageId, ArticleRepository $articleRepository)
     {
         $this->articleRepository = $articleRepository;
@@ -26,25 +36,21 @@ final class ArticleListControl extends Control {
      * Render list of articles.
      */
     public function render() {
-
-        $articlePageId = $this->getParameter('pageId');
         $result = $this->articleRepository->getPagedArticles($this->articlePageId, 4);
+
         $this->template->articles = $result['items'];
         $this->template->articlesLastPage = $result['lastPage'];
-
         $this->template->render(__DIR__ . '/ArticleListControl.latte');
     }
 
     /**
-     * Handler of async signal event.
-     * @param $articleId
+     * Async event for incrementing rating of selected article.
+     * @param $articleId $articleId Identifier of passed article.
      */
-    public function handleChangeClickState($articleId)
+    public function handleIncrementRating($articleId)
     {
         $this->articleRepository->incrementRatingCount($articleId);
-
-        $this->redrawControl('clicked_area'); // invalid snippet 'clicked_area'
-
+        $this->redrawControl('articlesListContainer'); // invalid snippet 'articlesListContainer'
     }
 
 }
