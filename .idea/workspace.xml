@@ -21,9 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b7bcaab3-54be-411b-97ec-7386756697b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/ArticleListControl.latte" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/ArticleListControl.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/app/Components/ArticleListControl.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/ArticleListControl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapp/app/Components/ArticleListControlFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Components/ArticleListControlFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/HomepagePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/ProfileEditPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/app/Presenters/SignupPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app/Presenters/SignupPresenter.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,7 @@
       <workItem from="1605534922350" duration="8811000" />
       <workItem from="1605558427209" duration="7605000" />
       <workItem from="1605609388207" duration="10398000" />
-      <workItem from="1605684137521" duration="15750000" />
+      <workItem from="1605684137521" duration="17887000" />
     </task>
     <servers />
   </component>
