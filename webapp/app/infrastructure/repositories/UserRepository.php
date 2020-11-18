@@ -44,14 +44,19 @@ final class UserRepository implements IUserRepository {
 
     /**
      * Change user password based on its id and passed new password.
-     * @param $userId User identifier (Primary key from DBMS)
-     * @param $newPassword New password that will be assigned to specific user.
+     * @param $userId $userId User identifier (Primary key from DBMS)
+     * @param $newPassword $newPassword New password that will be assigned to specific user.
      */
     public function changeUserPassword($userId, $newPassword) {
 
         if (strlen($newPassword) == 0) return;
 
-        $this->database->query("UPDATE User SET password = '$newPassword' WHERE ID = $userId");
+        $entity = $this->database->table('User')->get($userId);
+
+        if(isset($entity)) {
+            $this->database->query("UPDATE User SET password = '$newPassword' WHERE ID = $userId");
+        }
+
     }
 
 }
