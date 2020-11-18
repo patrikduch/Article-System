@@ -7,6 +7,7 @@ namespace App\Core\Interfaces\Repositories;
  */
 interface IUserRepository
 {
+    public function getUser($userId);
     public function  signUpUser($username, $password);
     public function changeUserPassword($userId, $newPassword);
 }

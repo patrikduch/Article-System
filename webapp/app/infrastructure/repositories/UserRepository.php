@@ -51,12 +51,23 @@ final class UserRepository implements IUserRepository {
 
         if (strlen($newPassword) == 0) return;
 
-        $entity = $this->database->table('User')->get($userId);
+        $entity = $this->getUser($userId);
 
         if(isset($entity)) {
             $this->database->query("UPDATE User SET password = '$newPassword' WHERE ID = $userId");
         }
-
     }
 
+    /**
+     * Get single user by its identifier.
+     * @param $userId $userId Identifier of target user.
+     */
+    public function getUser($userId)
+    {
+        $entity = $this->database->table('User')->get($userId);
+
+        if (isset($entity)) {
+            return $entity;
+        }
+    }
 }
